@@ -9,7 +9,6 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from wordcloud import WordCloud
 import time
-import bz2
 
 df1_anime_cleaned=pickle.load(open("anime_recommendation.pkl","rb"))
 similarity=pickle.load(open("similarity.pkl", "rb"))
