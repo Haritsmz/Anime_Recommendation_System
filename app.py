@@ -12,13 +12,7 @@ import time
 import bz2
 
 df1_anime_cleaned=pickle.load(open("anime_recommendation.pkl","rb"))
-def decompress_pickle(file_path):
-    with bz2.BZ2File(file_path, 'rb') as compressed_file:
-        decompressed_data = pickle.load(compressed_file)
-    return decompressed_data
-
-file_path = "similarity.pbz2"
-similarity = decompress_pickle(file_path)
+similarity=pickle.load(open("similarity.pkl", "rb"))
 
 # Sidebar
 st.sidebar.title("Anime Dashboard")
