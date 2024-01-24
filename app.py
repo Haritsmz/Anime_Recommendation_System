@@ -9,15 +9,9 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from wordcloud import WordCloud
 import time
-import bz2
 
 df1_anime_cleaned=pickle.load(open("anime_recommendation.pkl","rb"))
-def decompress_pickle(file_name):
-    with bz2.BZ2File(file_name + '.pbz2', 'rb') as f:
-        data = pickle.load(f)
-    return data
-
-similarity = decompress_pickle('similarity')
+similarity=pickle.load(open("similarity.pbz2","rb"))
 
 # Sidebar
 st.sidebar.title("Anime Dashboard")
