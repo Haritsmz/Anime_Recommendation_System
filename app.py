@@ -11,7 +11,7 @@ from wordcloud import WordCloud
 import time
 
 df1_anime_cleaned=pickle.load(open("anime_recommendation.pkl","rb"))
-similarity=pickle.load(open("similarity.pbz2","rb"))
+similarity=pickle.load(open("similarity.pkl","rb"))
 
 # Sidebar
 st.sidebar.title("Anime Dashboard")
